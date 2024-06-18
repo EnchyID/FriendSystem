@@ -31,6 +31,8 @@ class FriendSystem extends PluginBase implements Listener {
     
     $this->data_file = new Config($this->getDataFolder() . "data.json", Config::JSON);
     $this->data = $this->data_file->getAll();
+
+    $this->saveResource("data.json");
   }
 
   public function saveData(){
